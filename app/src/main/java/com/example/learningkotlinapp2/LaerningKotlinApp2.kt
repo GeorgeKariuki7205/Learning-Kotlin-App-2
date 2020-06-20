@@ -24,6 +24,7 @@ class LaerningKotlinApp2 : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        (activity as MainActivity).supportActionBar?.title = "App Two."
         return inflater.inflate(R.layout.fragment_laerning_kotlin_app2, container, false)
     }
 
