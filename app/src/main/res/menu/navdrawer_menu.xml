@@ -3,4 +3,6 @@
 
     <item android:title="Home" android:icon="@drawable/ic_home_black_24dp"  android:id="@+id/laerningKotlinApp2"/>
     <item android:title="Architecture" android:id="@+id/architecture" android:icon="@drawable/ic_domain_black_24dp"/>
+    <item android:title="Bottom Navigation" android:icon="@drawable/ic_settings_cell_black_24dp"
+          android:id="@+id/bottomNavigation"/>
 </menu>

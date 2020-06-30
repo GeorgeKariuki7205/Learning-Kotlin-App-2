@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home" android:id="@+id/laerningKotlinApp2" android:icon="@drawable/ic_home_black_24dp"/>
+    <item android:title="Architecture" android:id="@+id/architecture"
+          android:icon="@drawable/ic_domain_black_24dp"/>
+</menu>

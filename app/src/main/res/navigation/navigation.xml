@@ -6,6 +6,13 @@
 
     <fragment android:id="@+id/laerningKotlinApp2" android:name="com.example.learningkotlinapp2.LaerningKotlinApp2"
               android:label="fragment_laerning_kotlin_app2" tools:layout="@layout/fragment_laerning_kotlin_app2"/>
-    <fragment android:id="@+id/architecture" android:name="com.example.learningkotlinapp2.Architecture"
-              android:label="fragment_architecture" tools:layout="@layout/fragment_architecture"/>
+    <fragment android:id="@+id/architecture" android:name="com.example.learningkotlinapp2.architecture.Architecture"
+              android:label="fragment_architecture" tools:layout="@layout/fragment_architecture">
+        <action android:id="@+id/action_architecture_to_pageTwo" app:destination="@id/pageTwo"
+                app:launchSingleTop="false"/>
+    </fragment>
+    <fragment android:id="@+id/pageTwo" android:name="com.example.learningkotlinapp2.architecture.PageTwo"
+              android:label="fragment_page_two" tools:layout="@layout/fragment_page_two">
+        <argument android:name="score" app:argType="integer"/>
+    </fragment>
 </navigation>

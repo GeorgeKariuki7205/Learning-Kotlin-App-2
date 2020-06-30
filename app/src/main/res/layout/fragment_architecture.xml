@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
-        tools:context=".Architecture">
+        tools:context=".architecture.Architecture">
 
+    <data>
+        <variable name="architectureViewModel" type="com.example.learningkotlinapp2.architecture.ArchitectureViewModel"/>
+    </data>
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -13,9 +16,8 @@
                 android:id="@+id/Heading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:gravity="center_horizontal"
-                android:text="Model View View Model Architecture."
+                android:text="MODEL VIEW VIEW CONTROLLER ARCITECTURE."
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -49,7 +51,7 @@
                             android:layout_marginTop="15dp"
                             android:layout_marginBottom="5dp"
                             android:gravity="center_horizontal"
-                            android:text="0"
+                            android:text="@{architectureViewModel.liveValue.toString()}"
                             android:textAppearance="?attr/textAppearanceHeadline6"
                             android:textColor="@color/black"
                             android:textSize="30sp"
@@ -76,6 +78,7 @@
                                 android:layout_alignParentLeft="true"
                                 android:text="ADD"
                                 android:textStyle="bold"
+                                android:onClick="@{() -> architectureViewModel.add()}"
                                 app:icon="@drawable/ic_add_box_black_24dp" />
 
                         <Button
@@ -84,6 +87,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentRight="true"
                                 android:text="REMOVE"
+                                android:onClick="@{() -> architectureViewModel.subtract()}"
                                 android:textStyle="bold"
                                 app:backgroundTint="#FA0404"
                                 app:icon="@drawable/ic_indeterminate_check_box_black_24dp" />
@@ -94,6 +98,11 @@
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
+        <Button
+                android:text="Go to Next Page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/nextPage"/>
     </LinearLayout>
+
 
 </layout>
