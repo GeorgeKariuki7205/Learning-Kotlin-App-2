@@ -15,4 +15,6 @@
               android:label="fragment_page_two" tools:layout="@layout/fragment_page_two">
         <argument android:name="score" app:argType="integer"/>
     </fragment>
+    <fragment android:id="@+id/personalData" android:name="com.example.learningkotlinapp2.personalData.personalData"
+              android:label="fragment_personal_data" tools:layout="@layout/fragment_personal_data"/>
 </navigation>

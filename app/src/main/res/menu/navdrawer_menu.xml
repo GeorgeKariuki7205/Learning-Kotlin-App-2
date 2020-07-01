@@ -5,4 +5,5 @@
     <item android:title="Architecture" android:id="@+id/architecture" android:icon="@drawable/ic_domain_black_24dp"/>
     <item android:title="Bottom Navigation" android:icon="@drawable/ic_settings_cell_black_24dp"
           android:id="@+id/bottomNavigation"/>
+    <item android:title="DataBase" android:id="@+id/personalData" android:icon="@drawable/ic_folder_black_24dp"/>
 </menu>
