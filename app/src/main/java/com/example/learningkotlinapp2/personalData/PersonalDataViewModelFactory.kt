@@ -1,19 +1,18 @@
 package com.example.learningkotlinapp2.personalData
 
 import android.app.Application
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.learningkotlinapp2.database.PersonalDataDao
 
-
-
-class personalDataViewModelFactory(
+class PersonalDataViewModelFactory(
     private val dataSource: PersonalDataDao,
     private val application: Application) : ViewModelProvider.Factory {
     @Suppress("unchecked_cast")
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(personalDataViewModel::class.java)) {
-            return personalDataViewModel(dataSource, application) as T
+        if (modelClass.isAssignableFrom(PersonalDataViewModel::class.java)) {
+            return PersonalDataViewModel(dataSource, application) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }

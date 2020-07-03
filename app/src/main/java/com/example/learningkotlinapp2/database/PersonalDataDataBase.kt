@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 
 @Database(entities = [PersonalData::class], version = 1, exportSchema = false)
 abstract class PersonalDataDataBase :RoomDatabase(){
-    abstract  val sleepDatabaseDao: PersonalDataDao
+    abstract  val personalDataDao: PersonalDataDao
 
     companion object{
         @Volatile

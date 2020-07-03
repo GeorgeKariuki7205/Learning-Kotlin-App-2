@@ -15,6 +15,12 @@
               android:label="fragment_page_two" tools:layout="@layout/fragment_page_two">
         <argument android:name="score" app:argType="integer"/>
     </fragment>
-    <fragment android:id="@+id/personalData" android:name="com.example.learningkotlinapp2.personalData.personalData"
-              android:label="fragment_personal_data" tools:layout="@layout/fragment_personal_data"/>
+    <fragment android:id="@+id/personalData" android:name="com.example.learningkotlinapp2.personalData.PersonalData"
+              android:label="fragment_personal_data" tools:layout="@layout/fragment_personal_data">
+        <action android:id="@+id/action_personalData_to_addNewProfile2" app:destination="@id/addNewProfile"/>
+    </fragment>
+    <fragment android:id="@+id/addNewProfile" android:name="com.example.learningkotlinapp2.addNewProfile.AddNewProfile"
+              android:label="fragment_add_new_profile" tools:layout="@layout/fragment_add_new_profile">
+        <action android:id="@+id/action_addNewProfile_to_personalData" app:destination="@id/personalData"/>
+    </fragment>
 </navigation>

@@ -7,10 +7,11 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 
-class personalDataViewModel(val database: PersonalDataDao, application: Application
+class PersonalDataViewModel(val database: PersonalDataDao, application: Application
 ) : AndroidViewModel(application) {
 
 private  var viewModelJob = Job()
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
+    val profile = database.getAllData()
 
 }
