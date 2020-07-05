@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.NavHostFragment
 import com.example.learningkotlinapp2.MainActivity
@@ -37,6 +38,7 @@ class PersonalData : Fragment() {
             NavHostFragment.findNavController(this).navigate(action)
         }
 
+
 //        Initialising the creation of the viewModel by using the viewModel Factory.
         val application = requireNotNull(this.activity).application
         val dataSource = PersonalDataDataBase.getInstance(application).personalDataDao
@@ -44,6 +46,15 @@ class PersonalData : Fragment() {
         val personalDataViewModel = ViewModelProviders.of(this, viewModelFactory).get(PersonalDataViewModel::class.java)
         binding.personalDataViewModel = personalDataViewModel
         binding.setLifecycleOwner(this)
+
+        val personalDataAdapter = PersonalDataAdapter()
+        binding.personalDataList.adapter = personalDataAdapter
+
+        personalDataViewModel.profile.observe(this, Observer {
+            it?.let{
+                personalDataAdapter.submitList(it)
+            }
+        })
 
         return binding.root
     }

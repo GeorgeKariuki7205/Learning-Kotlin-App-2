@@ -8,4 +8,12 @@
     <string name="supporting_text">Supporting Text</string>
     <string name="action_1">ADD</string>
     <string name="action_2">SUBTRACT</string>
+    <string-array name="ageGroup">
+        <item>Choose Ae Group.</item>
+        <item>0-10</item>
+        <item>11-20</item>
+        <item>21-30</item>
+        <item>31-40</item>
+        <item>41-50</item>
+    </string-array>
 </resources>
